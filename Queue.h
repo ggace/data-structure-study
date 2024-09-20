@@ -2,28 +2,33 @@
 
 #include "Util.h"
 
-#ifndef Stack
-#define Stack
+#ifndef Queue
+#define Queue
 
-typedef struct _Node{
+typedef struct _queue {
 
-} Node;
+} queue;
 
 #endif
 
-Node* make_new_node(ll value);
-void free_all(Node* node);
+//노드 생성 삭제용
+queue* make_new_node_queue(ll value);
+void free_all(queue* node);
 
-Node* create_queue();
+//큐 생성
+queue* create_queue();
 
-Node* front(Node* node);
-Node* back(Node* node);
+//값
+queue* front(queue* node);
+queue* back(queue* node);
 
-ll size(Node* node);
-int empty(Node* node);
+//사이즈
+ll size(queue* node);
+int empty(queue* node);
 
-void push(Node* node, ll value);
-void pop(Node* node);
+//요소 삽입 삭제
+void push(queue* node, ll value);
+void pop(queue* node);
 
-
-void swap(Node* node1, Node* node2);
+//큐 스왑
+void swap(queue* node1, queue* node2);

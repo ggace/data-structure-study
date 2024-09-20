@@ -18,4 +18,8 @@ typedef unsigned long long ull;
 #include <limits.h>
 #include <ctype.h>
 
+#include "LinkedList.h"
+#include "Stack.h"
+#include "Queue.h"
+
 #endif

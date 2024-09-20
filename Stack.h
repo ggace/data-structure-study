@@ -5,24 +5,24 @@
 #ifndef Stack
 #define Stack
 
-typedef struct _Node{
+typedef struct _stack{
 
-} Node;
+} stack;
 
 #endif
 
-Node* make_new_node(ll value);
-void free_all(Node* node);
+stack* make_new_node_stack(ll value);
+void free_all(stack* node);
 
-Node* create_stack();
+stack* create_stack();
 
-Node* top(Node* node);
+stack* top(stack* node);
 
-ll size(Node* node);
-int empty(Node* node);
+ll size(stack* node);
+int empty(stack* node);
 
-void push(Node* node, ll value);
-void pop(Node* node);
+void push(stack* node, ll value);
+void pop(stack* node);
 
 
-void swap(Node* node1, Node* node2);
+void swap(stack* node1, stack* node2);

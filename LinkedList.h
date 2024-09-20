@@ -5,33 +5,43 @@
 #ifndef LinkedList
 #define LinkedList
 
-typedef struct _Node {
+typedef struct _list {
     
-} Node;
+} list;
 
 #endif
 
-Node* make_new_node(ll value);
-void free_all(Node* node);
+//노드 생성 삭제용
+list* make_new_node_list(ll value);
+void free_all(list* node);
 
-Node* create_list();
+//리스트 생성
+list* create_list();
 
-Node* begin(Node* node);
-Node* end(Node* node);
-Node* get_node(Node* node, ll index);
-Node* search(Node* node, ll value);
+//이터레이터
+list* begin(list* node);
+list* end(list* node);
+list* get_node(list* node, ll index);
+list* search(list* node, ll value);
 
-ll size(Node* node);
-int empty(Node* node);
+//값
+ll front(list* node);
+ll back(list* node);
 
-void push_back(Node* node, ll value);
-void push_front(Node* node, ll value);
-void pop_back(Node* node);
-void pop_front(Node* node);
-void insert(Node* node, ll value, ll index);
-void erase(Node* node, ll index);
+//사이즈관련
+ll size(list* node);
+int empty(list* node);
 
-void display(Node* node);
+//요소 삽입 삭제
+void push_back(list* node, ll value);
+void push_front(list* node, ll value);
+void pop_back(list* node);
+void pop_front(list* node);
+void insert(list* node, ll value, ll index);
+void erase(list* node, ll index);
 
+//요소 모두 출력
+void display(list* node);
 
-void swap(Node* node1, Node* node2);
+//두 리스트 스왑, 하고 싶으면
+void swap(list* node1, list* node2);
