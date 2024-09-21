@@ -27,6 +27,8 @@ typedef struct _vector {
     void (*pop_front)(struct _vector*);
     void (*insert)(struct _vector*, ll, ll);
     void (*erase)(struct _vector*, ll);
+
+    void (*free)(vector);
 } vector;
 
 #endif

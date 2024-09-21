@@ -25,6 +25,8 @@ vector* make_vector() {
     new_vector->insert = insert_vector;
     new_vector->erase = erase_vector;
 
+    new_vector->free = free_all_vector;
+
     return new_vector;
 }
 

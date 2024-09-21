@@ -6,29 +6,36 @@
 #define Queue
 
 typedef struct _queue {
+    
+    void (*free)(queue*);
+
+    queue* (*front)(queue*);
+    queue* (*back)(queue*);
+
+    ll (*size)(queue*);
+    int (*empty)(queue*);
+
+    void (*push)(queue*, ll);
+    void (*pop)(queue*);
+
+    //함수 이외는 직접 구현
 
 } queue;
 
 #endif
 
-//노드 생성 삭제용
 queue* make_new_node_queue(ll value);
-void free_all(queue* node);
+void free_all_queue(queue* node);
 
-//큐 생성
 queue* create_queue();
 
-//값
-queue* front(queue* node);
-queue* back(queue* node);
+queue* front_queue(queue* node);
+queue* back_queue(queue* node);
 
-//사이즈
-ll size(queue* node);
-int empty(queue* node);
+ll size_queue(queue* node);
+int empty_queue(queue* node);
 
-//요소 삽입 삭제
-void push(queue* node, ll value);
-void pop(queue* node);
+void push_queue(queue* node, ll value);
+void pop_queue(queue* node);
 
-//큐 스왑
-void swap(queue* node1, queue* node2);
+void swap_queue(queue* node1, queue* node2);
