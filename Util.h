@@ -17,5 +17,6 @@ typedef unsigned long long ull;
 #include <stdlib.h>
 #include <limits.h>
 #include <ctype.h>
+#include <string.h>
 
 #endif
